@@ -113,17 +113,21 @@ public class HomeWorkLessonTwo {
         int massiv[] = {1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0,};
         changeOnetoZero(massiv);
 
+
         //    the second task
         int massiv1[] = new int[8];
         fillMassive(massiv1);
+
 
         //        the third task
         int massiv2[] = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         lessThanSixIncriaseOnTwo(massiv2);
 
+
         //        the fourth task - обращаю внимание, что massiv2 к данному моменту у нас изменился.
         int min = getMin(massiv2);
         int max = getMax(massiv2);
+
 
         //        the fifth task
         int[][] massiv3 = new int[5][5];
@@ -134,8 +138,12 @@ public class HomeWorkLessonTwo {
         rightSumEqualsLeftSum(massiv4);
         System.out.println(rightSumEqualsLeftSum(massiv4));
 
+
         //        the seventh task
         changePosition(massiv4, -4);
+
+
+
     }
 }
 

@@ -4,20 +4,17 @@ public class HomeWorkLessonOne {
 
     //    the first task
     public static double calculateExpression(int a, int b, int c, int d) {
-        double resultOfExpression = a * (b + ((double)c / d));
+        double resultOfExpression = a * (b + (c/ d));
         return resultOfExpression;
     }
 
     //  the second task
     private static boolean lieInInterval(int a, int b) {
-        boolean resultOfMethod;
         if (a + b > 10 && a + b < 20) {
-            resultOfMethod = true;
+            return true;
         } else {
-            resultOfMethod = false;
+            return false;
         }
-
-        return resultOfMethod;
     }
 
     //    the third task

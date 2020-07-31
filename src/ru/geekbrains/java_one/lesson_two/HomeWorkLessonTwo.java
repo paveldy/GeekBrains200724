@@ -1,3 +1,4 @@
+
 package ru.geekbrains.java_one.lesson_two;
 
 import java.util.Arrays;
@@ -142,7 +143,6 @@ public class HomeWorkLessonTwo {
 
         //        the seventh task
         changePosition(massiv4, -4);
-
 
 
     }

@@ -44,6 +44,7 @@ public class HomeWorkLessonTwo {
         return max;
     }
 
+
     private static int getMin(int[] massiv2) {
         int min = massiv2[0];
         for (int i = 0; i < massiv2.length; i++) {

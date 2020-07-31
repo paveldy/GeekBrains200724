@@ -145,7 +145,6 @@ public class HomeWorkLessonTwo {
         changePosition(massiv4, -4);
 
 
-
     }
 }
 

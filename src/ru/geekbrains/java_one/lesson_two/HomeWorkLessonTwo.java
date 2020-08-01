@@ -19,10 +19,12 @@ public class HomeWorkLessonTwo {
 
     //    two task
     private static void fillMassive(int[] massiv1) {
-        massiv1[0] = 1;
-        for (int i = 1; i < massiv1.length; i++) {
-            massiv1[i] = massiv1[i - 1] + 3;
+//        massiv1[0] = 1;
+        for (int i = 0; i < massiv1.length; i++) {
+//            massiv1[i] = massiv1[i - 1] + 3;
+            massiv1[i] = i * 3 + 1;
         }
+        System.out.println(Arrays.toString(massiv1));
     }
 
     //     third task
@@ -58,13 +60,15 @@ public class HomeWorkLessonTwo {
 
     private static void fillDiagonalByOne(int[][] massiv3) {
         for (int i = 0; i < massiv3.length; i++) {
-            for (int j = 0; j < massiv3.length; j++) {
-                if (i == j || j == massiv3.length - i - 1) {
-                    massiv3[i][j] = 1;
-                }
+            int x = massiv3.length - i - 1;
+            //            for (int j = 0; j < massiv3.length; j++) {
+            if (i == i || x == massiv3.length - i - 1) {
+                massiv3[i][i] = 1;
+                massiv3[i][x] = 1;
             }
         }
     }
+//    }
 
     private static boolean rightSumEqualsLeftSum(int[] massiv4) {
         int sumRight = 0;
@@ -97,19 +101,20 @@ public class HomeWorkLessonTwo {
                 a[a.length - 1] = tmp;
             }
             System.out.println(Arrays.toString(a));
-        } else if (n<0){
-            int m=-n;
+        } else if (n < 0) {
+            int m = -n;
             for (int i = 0; i < m; i++) {
                 int tmp;
-                tmp = a[a.length-1];
+                tmp = a[a.length - 1];
                 for (int j = 0; j < a.length - 1; j++) {
-                    a[a.length-1-j] = a[a.length-2-j];
+                    a[a.length - 1 - j] = a[a.length - 2 - j];
                 }
                 a[0] = tmp;
             }
             System.out.println(Arrays.toString(a));
         }
     }
+
     public static void main(String[] args) {
         //    the first task
         int massiv[] = {1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0,};

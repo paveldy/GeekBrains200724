@@ -16,13 +16,9 @@ public class Example {
     public static int X;
     public static int Y;
     public static boolean flag = false;
-    public static int count = 0;
 
     private static void initField() {
         System.out.println("Введите размер поля через пробел");
-
-//        fieldSizeX = 3;
-//        fieldSizeY = 3;
         fieldSizeX = SCANNER.nextInt();
         fieldSizeY = SCANNER.nextInt();
         field = new char[fieldSizeY][fieldSizeX];
@@ -57,7 +53,7 @@ public class Example {
     }
 
     private static void humanTurn() {
-//        flag = false;
+        flag = false;
         int x;
         int y;
         do {
@@ -79,19 +75,32 @@ public class Example {
     private static void aiTurn() {
         int x;
         int y;
-//        if (flag) {
-//            if (isEmptyCell(X, Y)) {
-//                field[X][Y] = DOT_AI;
-//                flag = false;
+
+//        if (checkWin(DOT_HUMAN, quantityOfFishka - 1)) {
+//            System.out.println("Человек может сейчас выиграть");
+//            if (possibleCheckWin(DOT_HUMAN, quantityOfFishka - 1)) {
+//                System.out.println("координаты" + X + " " + Y);
+//                x = Y;
+//                y = X;
+//                field[y][x] = DOT_AI;
+//            } else {
+//                do {
+//                    x = RANDOM.nextInt(fieldSizeX);
+//                    y = RANDOM.nextInt(fieldSizeY);
+//                } while (!isEmptyCell(x, y));
+//                field[y][x] = DOT_AI;
 //            }
-//        } else if (!flag) {
+//        }
+//         else {
             do {
                 x = RANDOM.nextInt(fieldSizeX);
                 y = RANDOM.nextInt(fieldSizeY);
             } while (!isEmptyCell(x, y));
             field[y][x] = DOT_AI;
         }
-//    }
+
+
+
 
     private static boolean checkDraw() {
         for (int y = 0; y < fieldSizeY; y++) {
@@ -102,72 +111,271 @@ public class Example {
         return true;
     }
 
-    private static boolean checkWin(char c) {
+//    private static boolean possibleCheckWin(char c, int a) {
+//        int count = 0;
+//        for (int x = 0; x < fieldSizeX; x++) {
+//            count = 0;
+//            for (int y = 0; y < fieldSizeY; y++) {
+//                if (field[x][y] == c) {
+//                    count += 1;
+//                } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
+//                    count = 0;
+//                }
+//                if (count >= a) {
+//                    if (isValidCell(x, y + 1)) {
+//                        if (field[x][y + 1] != DOT_AI) {
+//                            X = x;
+//                            Y = y + 1;
+//                            flag = true;
+//                        } else if (field[x][y + 1] == DOT_AI) {
+//                            return false;
+//                        }
+//                    } else if (isValidCell(x, y - a)) {
+//                        if (field[x][y - a] != DOT_AI) {
+//                            X = x;
+//                            Y = y - a;
+//                            flag = true;
+//                        } else if (field[x][y - a] == DOT_AI) {
+//                            return false;
+//                        }
+//                    }else if(isValidCell(x, y + 1) &&isValidCell(x, y - a)) {
+//                        if (field[x][y - a] != DOT_AI) {
+//                            X = x;
+//                            Y = y - a;
+//                            flag = true;
+//                        } else if (field[x][y - a] == DOT_AI) {
+//                            return false;
+//                        }
+//                    }
+//                }return true;
+//            }
+//        }
+//
+//
+//        for (int x = 0; x < fieldSizeX; x++) {
+//            count = 0;
+//            for (int y = 0; y < fieldSizeY; y++) {
+//                if (field[y][x] == c) {
+//                    count += 1;
+//                } else if (field[y][x] == DOT_EMPTY || field[y][x] != c) {
+//                    count = 0;
+//                }
+//                if (count >= a) {
+//                    if (isValidCell(y + 1, x)) {
+//                        if (field[y + 1][x] != DOT_AI) {
+//                            X = y + 1;
+//                            Y = x;
+//                            flag = true;
+//                        } else if (field[y + 1][x] == DOT_AI) {
+//                            return false;
+//                        }
+//                    } else if (isValidCell(y - a, x)) {
+//                        if (field[y - a][x] != DOT_AI) {
+//                            X = y - a;
+//                            Y = x;
+//                            flag = true;
+//                        } else if (field[y - a][x] == DOT_AI) {
+//                            return false;
+//                        }
+//                    }
+//                    return true;
+//                }
+//
+//            }
+//        }
+//
+//        int n = fieldSizeX - a;
+//        for (int i = 0; i <= n; i++) {
+//            count = 0;
+//            for (int x = 0, y = fieldSizeY - 1 - i; x < fieldSizeX && y >= 0; x++, y--) {
+//                if (field[x][y] == c) {
+//                    count += 1;
+//                } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
+//                    count = 0;
+//                }
+//                if (count >= a) {
+//                    if (isValidCell(x, y + 1)) {
+//                        if (field[x][y + 1] != DOT_AI) {
+//                            X = x;
+//                            Y = y + 1;
+//                            flag = true;
+//                        } else if (field[x][y + 1] == DOT_AI) {
+//                            return false;
+//                        }
+//                    } else if (isValidCell(x, y - a)) {
+//                        if (field[x][y - a] != DOT_AI) {
+//                            X = x;
+//                            Y = y - a;
+//                            flag = true;
+//                        } else if (field[x][y - a] == DOT_AI) {
+//                            return false;
+//                        }
+//                    }
+//                    return true;
+//                }
+//            }
+//        }
+//            for (int i = 0; i <= n; i++) {
+//                count = 0;
+//                for (int x = i, y = fieldSizeY - 1; x <= fieldSizeX - i && y >= 0; x++, y--) {
+//                    if (field[x][y] == c) {
+//                        count += 1;
+//                    } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
+//                        count = 0;
+//                    }
+//                    if (count >= a) {
+//                        if (isValidCell(x, y + 1)) {
+//                            if (field[x][y + 1] != DOT_AI) {
+//                                X = x;
+//                                Y = y + 1;
+//                                flag = true;
+//                            } else if (field[x][y + 1] == DOT_AI) {
+//                                return false;
+//                            }
+//                        } else if (isValidCell(x, y - a)) {
+//                            if (field[x][y - a] != DOT_AI) {
+//                                X = x;
+//                                Y = y - a;
+//                                flag = true;
+//                            } else if (field[x][y - a] == DOT_AI) {
+//                                return false;
+//                            }
+//                        }
+//                    }
+//                    return true;
+//                }
+//            }
+//
+//
+//
+//        for (int i = 0; i <= n; i++) {
+//            count = 0;
+//            for (int x = 0, y = i; x < fieldSizeX && y <= fieldSizeY - i; x++, y++) {
+//                if (field[x][y] == c) {
+//                    count += 1;
+//                    System.out.println(count);
+//                } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
+//                    count = 0;
+//                }
+//                if (count >= a) {
+//                    return true;
+//                }
+//            }
+//        }
+//        for (int i = 0; i <= n; i++) {
+//            count = 0;
+//            for (int x = i, y = 0; x <= fieldSizeX - i && y < fieldSizeY; x++, y++) {
+//                if (field[x][y] == c) {
+//                    count += 1;
+//                } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
+//                    count = 0;
+//                }
+//                if (count >= a) {
+//                    return true;
+//                }
+//            }
+//        }
+//
+//        return false;
+//    }
+
+
+    private static boolean checkWin(char c, int a) {
         int count = 0;
         for (int x = 0; x < fieldSizeX; x++) {
+            count = 0;
             for (int y = 0; y < fieldSizeY; y++) {
                 if (field[x][y] == c) {
                     count += 1;
                 } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
                     count = 0;
                 }
-//
-//                if (count == quantityOfFishka - 1) {
-//                    flag = true;
-//                    if (isEmptyCell(x+1,y+1)) {
-//                        X=x+1;
-//                        Y=y+1;
-//                    }
-//                }else
-                if (count >= quantityOfFishka) {
+                if (count >= a) {
                     return true;
                 }
             }
         }
 
 
-        count = 0;
         for (int x = 0; x < fieldSizeX; x++) {
+            count = 0;
             for (int y = 0; y < fieldSizeY; y++) {
                 if (field[y][x] == c) {
                     count += 1;
                 } else if (field[y][x] == DOT_EMPTY || field[y][x] != c) {
                     count = 0;
                 }
-                if (count >= quantityOfFishka) {
+                if (count >= a) {
                     return true;
                 }
 
             }
         }
 
-        count = 0;
-        for (int x = 0, y = fieldSizeY - 1;x < fieldSizeX; x++, y--) {
-            if (field[x][y] == c) {
-                count += 1;
-            } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
-                count = 0;
-            }
-            if (count >= quantityOfFishka) {
-                return true;
+        int n = fieldSizeX - a;
+        for (int i = 0; i <= n; i++) {
+            count = 0;
+            for (int x = 0, y = fieldSizeY - 1 - i; x < fieldSizeX && y >= 0; x++, y--) {
+                if (field[x][y] == c) {
+                    count += 1;
+                } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
+                    count = 0;
+                }
+                if (count >= a) {
+                    return true;
+                }
             }
         }
 
-        count = 0;
-        for (int x = 0, y = 0; x < fieldSizeX; x++, y++) {
-            if (field[x][y] == c) {
-                count += 1;
-            } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
-                count = 0;
-            }
-            if (count >= quantityOfFishka) {
-                return true;
+        for (int i = 0; i <= n; i++) {
+            count = 0;
+            for (int x = i, y = fieldSizeY - 1; x <= fieldSizeX - i && y >= 0; x++, y--) {
+                if (field[x][y] == c) {
+                    count += 1;
+                } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
+                    count = 0;
+                }
+                if (count >= a) {
+                    return true;
+                }
             }
         }
-        count=0;
+
+
+//        count = 0;
+
+        for (int i = 0; i <= n; i++) {
+            count = 0;
+            for (int x = 0, y = i; x < fieldSizeX && y <= fieldSizeY - i; x++, y++) {
+                if (field[x][y] == c) {
+                    count += 1;
+                    System.out.println(count);
+                } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
+                    count = 0;
+                }
+                if (count >= a) {
+                    return true;
+                }
+            }
+        }
+        for (int i = 0; i <= n; i++) {
+            count = 0;
+            for (int x = i, y = 0; x <= fieldSizeX - i && y < fieldSizeY; x++, y++) {
+                if (field[x][y] == c) {
+                    count += 1;
+//                    System.out.println(count);
+                } else if (field[x][y] == DOT_EMPTY || field[x][y] != c) {
+                    count = 0;
+                }
+                if (count >= a) {
+                    return true;
+                }
+            }
+        }
+
+//        count = 0;
         return false;
     }
-
 
     public static void main(String[] args) {
 
@@ -189,7 +397,7 @@ public class Example {
 
     private static boolean checkEndGame(char dot, String winMessage) {
         printField();
-        if (checkWin(dot)) {
+        if (checkWin(dot, quantityOfFishka)) {
             System.out.println(winMessage);
             return true;
         }

@@ -3,6 +3,7 @@ package ru.geekbrains.java_one.lesson_three;
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class Example {
     private static final char DOT_HUMAN = 'X';
     private static final char DOT_AI = 'O';

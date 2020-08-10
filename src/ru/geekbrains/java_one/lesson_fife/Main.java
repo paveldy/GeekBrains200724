@@ -3,6 +3,7 @@ package ru.geekbrains.java_one.lesson_fife;
 public class Main {
     public static void main(String[] args) {
 
+
         Cat cat0 = new Cat("Barsik",5,"White",200,2.5);
         Cat cat1 = new Cat("Filya", 8, "Grey", 250, 3);
         Dog dog0 = new Dog("Bob", 12, "Black", 500, 0.5, 10);

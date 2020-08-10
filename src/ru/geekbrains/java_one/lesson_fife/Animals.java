@@ -1,6 +1,7 @@
 package ru.geekbrains.java_one.lesson_fife;
 
 public abstract class Animals {
+
     protected String name;
     protected int age;
     protected String color;

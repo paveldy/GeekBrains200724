@@ -59,6 +59,7 @@ public class Main {
             }
         }
 
+
         print(arr);
         increaseSalary(arr);
         System.out.println("Average earnings = "+average(arr));

@@ -1,6 +1,7 @@
 package ru.geekbrains.java_one.lesson_fife;
 
 public class Dog extends Animals{
+
     int swimMax;
     public Dog(String name, int age, String color, int runMax, double jumpMax, int swimMax){
         super(name, age, color, runMax, jumpMax);

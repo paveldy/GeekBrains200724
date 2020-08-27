@@ -14,18 +14,20 @@ public class MyCanvas extends JPanel {
 
     MyCanvas(MyMainCircles controller) {
         this.controller = controller;
+
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-                controller.addBall();
+                if (e.getButton() == MouseEvent.BUTTON1) {
+                    controller.addBall();
+                }else if (e.getButton() == MouseEvent.BUTTON3) {
+                    controller.removeBall();
                 }
+            }
 
         });
-
         lastFrameTime = System.nanoTime();
-
-
     }
 
     @Override

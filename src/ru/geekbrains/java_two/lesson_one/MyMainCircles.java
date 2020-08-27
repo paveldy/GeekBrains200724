@@ -12,6 +12,7 @@ public class MyMainCircles extends JFrame {
     int a = 10;
     MyBall[] ball = new MyBall[a];
     MyBall[] ballAdd;
+    MyBall[] ballRemove;
 
 
     public static void main(String[] args) {
@@ -25,6 +26,16 @@ public class MyMainCircles extends JFrame {
         }
         ballAdd[ball.length] = new MyBall();
         ball = ballAdd;
+    }
+
+    public void removeBall() {
+        if (ball.length != 0) {
+            ballRemove = new MyBall[ball.length - 1];
+            for (int i = 0; i < ball.length - 1; i++) {
+                ballRemove[i] = ball[i];
+            }
+            ball = ballRemove;
+        }
     }
 
     public MyMainCircles() {

@@ -6,9 +6,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class MyCanvas extends JPanel {
+
     private float lastFrameTime;
     private MyMainCircles controller;
-    //    public Background back;
     public float delta;
     public int a;
 

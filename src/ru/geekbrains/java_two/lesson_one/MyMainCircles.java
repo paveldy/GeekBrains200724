@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MyMainCircles extends JFrame {
+
     private final int WIDTH = 800;
     private final int HEIGTH = 600;
     private final int POS_X = 400;

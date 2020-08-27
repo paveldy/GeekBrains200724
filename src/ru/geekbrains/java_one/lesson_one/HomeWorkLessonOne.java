@@ -73,7 +73,21 @@ public class HomeWorkLessonOne {
 
         System.out.println("to the fifth task");
         System.out.println(year(year));
+        System.out.println("______________________________");
+int m = new int[4][8].length;
+        System.out.println(m);
+        String t = "java";
+        String o=t.toUpperCase();
+        System.out.println(o);
 
+//Counter.countCount(10);
 
     }
+//    public static class Counter{
+//        int count;
+//        public static void countCount(int b){
+//            int y = b;
+//count++;
+//        }
+//    }
 }

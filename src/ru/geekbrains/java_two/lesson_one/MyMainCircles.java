@@ -9,23 +9,22 @@ public class MyMainCircles extends JFrame {
     private final int POS_X = 400;
     private final int POS_Y = 200;
     Background back;
-    static int a = 10;
-    static MyBall[] ball = new MyBall[a];
-    static MyBall[] ballAdd;
-
+    int a = 10;
+    MyBall[] ball = new MyBall[a];
+    MyBall[] ballAdd;
 
 
     public static void main(String[] args) {
         new MyMainCircles();
     }
 
-    public static void addBall(int e) {
-        ballAdd=new MyBall[ball.length+1];
-        for (int i = 0; i <ball.length ; i++) {
-            ballAdd[i]=ball[i];
+    public void addBall() {
+        ballAdd = new MyBall[ball.length + 1];
+        for (int i = 0; i < ball.length; i++) {
+            ballAdd[i] = ball[i];
         }
-        ballAdd[ball.length]=new MyBall();
-        ball=ballAdd;
+        ballAdd[ball.length] = new MyBall();
+        ball = ballAdd;
     }
 
     public MyMainCircles() {
@@ -39,7 +38,7 @@ public class MyMainCircles extends JFrame {
 
     }
 
-    public static void initAplication() {
+    public void initAplication() {
         for (int i = 0; i < a; i++) {
             ball[i] = new MyBall();
 

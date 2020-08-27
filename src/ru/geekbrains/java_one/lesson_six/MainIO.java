@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class MainIO {
     //
 
-
     public static void main(String[] args) throws IOException {
         FileOutputStream fos3 = new FileOutputStream("test3.txt", true);
         Scanner sc1 = new Scanner(new FileInputStream("test.txt"));

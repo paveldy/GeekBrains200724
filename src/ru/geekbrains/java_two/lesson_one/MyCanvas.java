@@ -18,7 +18,7 @@ public class MyCanvas extends JPanel {
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-                MyMainCircles.addBall(1);
+                controller.addBall();
                 }
 
         });

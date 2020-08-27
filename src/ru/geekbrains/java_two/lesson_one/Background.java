@@ -12,8 +12,6 @@ public class Background extends JPanel {
     }
 
     public Color render() {
-
-
         color = new Color(
                 (int) (Math.random() * 255),
                 (int) (Math.random() * 255),

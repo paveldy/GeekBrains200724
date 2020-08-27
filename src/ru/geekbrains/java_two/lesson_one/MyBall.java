@@ -7,7 +7,6 @@ import java.awt.event.MouseListener;
 
 public class MyBall {
 
-
     protected float x;
     protected float y;
     public float halfWidth;

@@ -16,6 +16,7 @@ public class MyCanvas extends JPanel {
         this.controller = controller;
 
         addMouseListener(new MouseAdapter() {
+
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);

@@ -26,7 +26,6 @@ public class HoweWork_2_2_Exception {
 
     public static int[][] integerMassiv(String[][] massive)  {
         int[][] inter = new int[4][4];
-
         for (int i = 0; i < massive.length; i++) {
             for (int j = 0; j < massive.length; j++) {
 //                 if(inter[i][j] != Integer.parseInt(massive[i][j])) throw new Words();;

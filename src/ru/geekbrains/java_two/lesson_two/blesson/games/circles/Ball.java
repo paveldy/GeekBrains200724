@@ -1,7 +1,7 @@
-package ru.gb.jtwo.blesson.games.circles;
+package ru.geekbrains.java_two.lesson_two.blesson.games.circles;
 
-import ru.gb.jtwo.blesson.games.common.GameCanvas;
-import ru.gb.jtwo.blesson.games.common.Sprite;
+import ru.geekbrains.java_two.lesson_two.blesson.games.common.GameCanvas;
+import ru.geekbrains.java_two.lesson_two.blesson.games.common.Sprite;
 
 import java.awt.*;
 

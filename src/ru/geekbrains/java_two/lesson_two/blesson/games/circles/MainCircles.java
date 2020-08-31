@@ -1,9 +1,9 @@
-package ru.gb.jtwo.blesson.games.circles;
+package ru.geekbrains.java_two.lesson_two.blesson.games.circles;
 
-import ru.gb.jtwo.blesson.games.common.CanvasListener;
-import ru.gb.jtwo.blesson.games.common.GameCanvas;
-import ru.gb.jtwo.blesson.games.common.GameObject;
-import ru.gb.jtwo.blesson.games.common.Sprite;
+import ru.geekbrains.java_two.lesson_two.blesson.games.common.CanvasListener;
+import ru.geekbrains.java_two.lesson_two.blesson.games.common.GameCanvas;
+import ru.geekbrains.java_two.lesson_two.blesson.games.common.GameObject;
+import ru.geekbrains.java_two.lesson_two.blesson.games.common.Sprite;
 
 import javax.swing.*;
 import java.awt.*;

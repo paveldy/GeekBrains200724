@@ -1,4 +1,4 @@
-package ru.gb.jtwo.blesson.online;
+package ru.geekbrains.java_two.lesson_two.blesson.online;
 
 import java.io.Closeable;
 import java.io.EOFException;

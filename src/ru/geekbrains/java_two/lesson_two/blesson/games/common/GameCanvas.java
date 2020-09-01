@@ -1,6 +1,6 @@
 package ru.geekbrains.java_two.lesson_two.blesson.games.common;
 
-import ru.gb.jtwo.blesson.games.circles.MainCircles;
+import ru.geekbrains.java_two.lesson_two.blesson.games.circles.MainCircles;
 
 import javax.swing.*;
 import java.awt.*;

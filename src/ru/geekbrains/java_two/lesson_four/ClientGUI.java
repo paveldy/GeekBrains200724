@@ -29,8 +29,6 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
     private PrintWriter outMSg;
     String sendMsg;
 
-    // создал сообщение
-
     private final JList<String> userList = new JList<>();
 
     public static void main(String[] args) {
@@ -47,7 +45,6 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setSize(WIDTH, HEIGHT);
-//        log.setEditable(false);
         JScrollPane scrollUser = new JScrollPane(userList);
         JScrollPane scrollLog = new JScrollPane(log);
         String[] users = {"user1", "user2", "user3", "user4", "user5",
@@ -57,7 +54,6 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
         cbAlwaysOnTop.addActionListener(this);
 
         tfMessage.grabFocus();
-//        inputStream();
 
 // ловим нажатие кнопки SEND
         btnSend.addActionListener(new ActionListener() {

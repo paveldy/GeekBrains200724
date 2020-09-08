@@ -41,7 +41,7 @@ public class Telefon {
     }
     public void print(String name) {
         for (Map.Entry<Long, String> o : mapa.entrySet()) {
-            if (o.getValue() == name) {
+            if (o.getValue().equals( name)) {
                 System.out.println("По вашему запросу есть: "+o.getValue() + " " + o.getKey());
             }
 

@@ -137,13 +137,14 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
     public void sentMessage() {
         try {
             String sendMsg = tfMessage.getText();
-            log.setText(sendMsg);
+            inputStream();
+            log.setText(sendMsg);// не уверен
             // здесь отправляю сообщение в метод для записи в файл
             // думаю лучше сделать в чат сервере
             outputStream(sendMsg);
 
             tfMessage.setText("");
-            outMSg.flush();
+//            outMSg.flush();
 
 
         } catch (NullPointerException | IOException e) {

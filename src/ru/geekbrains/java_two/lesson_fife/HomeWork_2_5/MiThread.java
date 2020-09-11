@@ -16,6 +16,7 @@ class MiThread extends Thread {
     }
 
 
+
     public static long fillArrayByFirstType() {
         fillArrayByOne();
 

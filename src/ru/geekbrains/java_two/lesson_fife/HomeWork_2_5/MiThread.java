@@ -2,7 +2,6 @@ package ru.geekbrains.java_two.lesson_fife.HomeWork_2_5;
 
 class MiThread extends Thread {
 
-
     static final int size = 10000000;
     static final int h = size / 2;
     static float[] arr = new float[size];
@@ -15,6 +14,7 @@ class MiThread extends Thread {
             arr[i] = 1;
         }
     }
+
 
 
     public static long fillArrayByFirstType() {

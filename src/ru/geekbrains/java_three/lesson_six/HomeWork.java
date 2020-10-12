@@ -13,6 +13,7 @@ public class HomeWork {
             }
         }
 
+
         if (position==0){
             System.out.println("в массиве нет 4");
         }
